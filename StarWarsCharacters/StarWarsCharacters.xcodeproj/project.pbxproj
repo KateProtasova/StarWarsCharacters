@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0EC3579B423507238DC36684 /* Pods_StarWarsCharacters.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24A1554A95B882148C6181F8 /* Pods_StarWarsCharacters.framework */; };
 		B69F1A0024276E08007A42D0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69F19FF24276E08007A42D0 /* AppDelegate.swift */; };
 		B69F1A0224276E08007A42D0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69F1A0124276E08007A42D0 /* SceneDelegate.swift */; };
 		B69F1A0424276E08007A42D0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69F1A0324276E08007A42D0 /* ViewController.swift */; };
@@ -16,6 +17,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		24A1554A95B882148C6181F8 /* Pods_StarWarsCharacters.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StarWarsCharacters.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		457303E6B06C3EA54E8996A1 /* Pods-StarWarsCharacters.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StarWarsCharacters.release.xcconfig"; path = "Target Support Files/Pods-StarWarsCharacters/Pods-StarWarsCharacters.release.xcconfig"; sourceTree = "<group>"; };
+		5EF395559BE71AD805DD5DFE /* Pods-StarWarsCharacters.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StarWarsCharacters.debug.xcconfig"; path = "Target Support Files/Pods-StarWarsCharacters/Pods-StarWarsCharacters.debug.xcconfig"; sourceTree = "<group>"; };
 		B69F19FC24276E08007A42D0 /* StarWarsCharacters.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StarWarsCharacters.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B69F19FF24276E08007A42D0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B69F1A0124276E08007A42D0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -31,17 +35,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0EC3579B423507238DC36684 /* Pods_StarWarsCharacters.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0E31E70749507E35E457A50F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5EF395559BE71AD805DD5DFE /* Pods-StarWarsCharacters.debug.xcconfig */,
+				457303E6B06C3EA54E8996A1 /* Pods-StarWarsCharacters.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		6297014FF8CA6E95D040AC1B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				24A1554A95B882148C6181F8 /* Pods_StarWarsCharacters.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		B69F19F324276E08007A42D0 = {
 			isa = PBXGroup;
 			children = (
 				B69F19FE24276E08007A42D0 /* StarWarsCharacters */,
 				B69F19FD24276E08007A42D0 /* Products */,
+				0E31E70749507E35E457A50F /* Pods */,
+				6297014FF8CA6E95D040AC1B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -74,9 +98,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B69F1A1024276E08007A42D0 /* Build configuration list for PBXNativeTarget "StarWarsCharacters" */;
 			buildPhases = (
+				A213DEDA5AD31FCB9C363A44 /* [CP] Check Pods Manifest.lock */,
 				B69F19F824276E08007A42D0 /* Sources */,
 				B69F19F924276E08007A42D0 /* Frameworks */,
 				B69F19FA24276E08007A42D0 /* Resources */,
+				89ABA6A2C7B68BF86AC0E79D /* [CP] Embed Pods Frameworks */,
+				B6AADB5124277D0200F7CAD4 /* SwiftLint Script */,
 			);
 			buildRules = (
 			);
@@ -132,6 +159,66 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		89ABA6A2C7B68BF86AC0E79D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-StarWarsCharacters/Pods-StarWarsCharacters-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-StarWarsCharacters/Pods-StarWarsCharacters-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-StarWarsCharacters/Pods-StarWarsCharacters-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A213DEDA5AD31FCB9C363A44 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-StarWarsCharacters-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B6AADB5124277D0200F7CAD4 /* SwiftLint Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "SwiftLint Script";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		B69F19F824276E08007A42D0 /* Sources */ = {
@@ -282,6 +369,7 @@
 		};
 		B69F1A1124276E08007A42D0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5EF395559BE71AD805DD5DFE /* Pods-StarWarsCharacters.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -301,6 +389,7 @@
 		};
 		B69F1A1224276E08007A42D0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 457303E6B06C3EA54E8996A1 /* Pods-StarWarsCharacters.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
