@@ -63,9 +63,10 @@ disabled_rules: # rule identifiers to exclude from running
   - multiple_closures_with_trailing_closure
   - notification_center_detachment
   - unused_setter_value
+  - implicit_return
 
 # should be enabled
-#  - force_try
+  - force_try
 #  - force_unwrapping
 #  - force_cast
 #  - trailing_closure
