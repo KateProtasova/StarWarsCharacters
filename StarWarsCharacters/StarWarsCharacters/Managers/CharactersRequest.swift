@@ -8,12 +8,17 @@
 
 import Foundation
 
-class CharactersReques: APIRequest {
+class CharactersRequest: APIRequest {
     var method = RequestType.GET
     var path = "people/"
     var parameters = [String: String]()
 
-    init(name: String) {
-        parameters["search"] = name
+    init(searchText: String, page: String? = nil) {
+        parameters["search"] = searchText
+        parameters["page"] = page
+    }
+
+    init(parameters: [String: String]? = nil) {
+        self.parameters = parameters ?? [:]
     }
 }

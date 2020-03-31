@@ -8,13 +8,19 @@
 
 import Foundation
 
-class Characters: Codable {
+protocol Nextable {
+    var next: String? { get }
+}
+
+typealias PagingModel = Nextable & Codable
+
+class Characters: PagingModel {
     let count: Int
     let next: String?
     let previous: String?
     var results: [Character] = []
 
-    init(count: Int, next: String, previous: String?, results: [Character]) {
+    init(count: Int, next: String?, previous: String?, results: [Character]) {
         self.count = count
         self.next = next
         self.previous = previous

@@ -32,7 +32,7 @@ class SearchCharactersViewController: UIViewController {
     // MARK: - Binding
 
     func bindTableView() {
-        viewModel.bind()
+        viewModel.result
             .bind(to: tableView.rx.items(cellIdentifier: "CharactersTableViewCell", cellType: CharactersTableViewCell.self)) {(index, character: Character, cell) in
                 cell.viewModel = CharacterViewModel(character: character)
         }

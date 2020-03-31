@@ -10,20 +10,16 @@ import RxSwift
 import RxAlamofire
 
 class APIClient {
-
-    private let baseURL = URL(string: "https://swapi.co/api/")!
-
-    func send<T: Codable>(apiRequest: APIRequest) -> Observable<T> {
-        return Observable<T>.create { [unowned self] observer in
-            let request = apiRequest.request(with: self.baseURL)
-            let task = URLSession.shared.dataTask(with: request) { data, response, error in
+    func send<T: Codable>(urlRequest: URLRequest) -> Observable<T> {
+        return Observable<T>.create { observer in
+            let task = URLSession.shared.dataTask(with: urlRequest) { data, response, error in
                 do {
-                    let model: T = try JSONDecoder().decode(T.self, from: data ?? Data())
+                   let model: T = try JSONDecoder().decode(T.self, from: data ?? Data())
                     observer.onNext(model)
+                    observer.onCompleted()
                 } catch let error {
                     observer.onError(error)
                 }
-                observer.onCompleted()
             }
             task.resume()
             return Disposables.create {

@@ -36,7 +36,7 @@ opt_in_rules:
   - sorted_first_last
   - strict_fileprivate
   - switch_case_on_newline
-  - trailing_closure
+#  - trailing_closure
   - unneeded_parentheses_in_closure_argument
   - vertical_parameter_alignment_on_call
   - yoda_condition
